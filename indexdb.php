@@ -38,7 +38,7 @@
         $result = mysqli_query($connection, $query);
         if($result){
             $_SESSION['username']=$username;
-         header("Location:register.php");
+         header("Location:php/register.php");
         }
         else{
                       $fmsg ="User Registration Failed";
@@ -65,7 +65,7 @@
     if($navpassword==$navpasswordagain){
         $smsg="YAAY u logged in";
         $_SESSION["email"]=$navemail;
-        header("Location:home.php");
+        header("Location:php/home.php");
     }
     else $fmsg="LOGIN FAILED";
 }
@@ -77,10 +77,10 @@
     <head>          
     <title>MEDICAL RECORDS</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-             <script type="text/javascript" src="index.js"></script>
+             <script type="text/javascript" src="js/index.js"></script>
     </head>
     <body>
         <!-- Latest compiled and minified CSS -->
@@ -102,15 +102,15 @@
                                                 <li class=" dropdown">
                                                     <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Doctor</strong><span class="caret"></span></a>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="doctorsview.php">View Doctors</a></li>
-                                                        <li><a href="doctorsign.php">Doctor Sign In</a></li>
+                                                        <li><a href="php/doctorsview.php">View Doctors</a></li>
+                                                        <li><a href="php/doctorsign.php">Doctor Sign In</a></li>
                                                     </ul>
                                                 </li>
                                               
                                                 <li class= "dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Blood Bank</strong><span class="caret"></span></a>
                                                     <ul class="dropdown-menu">
                                                        
-                                                        <li><a href="bloodbank.php">Blood Bank Sign In</a></li>
+                                                        <li><a href="php/bloodbank.php">Blood Bank Sign In</a></li>
                                                     </ul>
                                                 </li>
                                                
